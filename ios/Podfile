@@ -1,21 +1,13 @@
-# Podfile gerado para Flutter + Shorebird
 platform :ios, '12.0'
 
-# Ignore todas as versões de pods duplicadas
+# CocoaPods para Flutter
 install! 'cocoapods', :disable_input_output_paths => true
 
-# Permite que CocoaPods use frameworks dinâmicos
 use_frameworks!
 use_modular_headers!
 
 target 'Runner' do
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
-
-  # Shorebird usa BoringSSL, que pode causar conflitos
-  # Essas configurações ajudam a evitar erros de compilação
-  pod 'Firebase/Core'
-  pod 'Firebase/Firestore'
-  pod 'Firebase/Storage'
 end
 
 post_install do |installer|
