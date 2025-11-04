@@ -7,6 +7,8 @@ workflows:
       vars:
         SHOREBIRD_TOKEN: Encrypted(...) # já configurado no painel do Codemagic
     scripts:
+      - name: Recria arquivos iOS (incluindo Podfile)
+        script: flutter create .
       - name: Install Shorebird CLI
         script: |
           curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/shorebirdtech/install/main/install.sh | bash
