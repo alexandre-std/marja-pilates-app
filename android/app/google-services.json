@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "155485008663",
+    "project_id": "pilatesapp-b47d7",
+    "storage_bucket": "pilatesapp-b47d7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155485008663:android:736ccc709e03e577f4fd52",
+        "android_client_info": {
+          "package_name": "com.example.pilates_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHzg_m6MjsApPpZQP_VkBNC1uTQ0S7Gsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

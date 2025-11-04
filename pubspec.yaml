@@ -1,0 +1,44 @@
+name: pilates_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  firebase_core: ^2.25.4
+  cloud_firestore: ^4.14.0
+  mask_text_input_formatter: ^2.5.0
+  intl: ^0.20.2
+  fl_chart: ^0.70.2
+  pdf: ^3.10.7
+  printing: ^5.11.0
+  firebase_storage: ^11.0.0
+  url_launcher: ^6.2.5
+  path_provider: ^2.1.5
+  share_plus: ^12.0.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1  # ✅ pacote para ícone
+
+flutter_launcher_icons:  # ✅ configuração do ícone
+  android: true
+  ios: true
+  image_path: "assets/icon.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo_marja.webp
+    - assets/icon.png  # ✅ ícone incluído como asset
