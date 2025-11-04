@@ -1,0 +1,21 @@
+workflows:
+  shorebird_ios_release:
+    name: Shorebird iOS Release
+    environment:
+      flutter: stable
+      xcode: latest
+      vars:
+        SHOREBIRD_TOKEN: Encrypted(...) # já configurado no painel do Codemagic
+    scripts:
+      - name: Install Shorebird CLI
+        script: |
+          curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/shorebirdtech/install/main/install.sh | bash
+          export PATH="$HOME/.shorebird/bin:$PATH"
+      - name: Shorebird login (CI)
+        script: |
+          echo "$SHOREBIRD_TOKEN" | shorebird login --ci
+      - name: Shorebird release iOS
+        script: |
+          shorebird release ios
+    artifacts:
+      - build/ios/ipa/*.ipa
